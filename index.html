@@ -32,7 +32,7 @@
             class="input-name"
             placeholder="Escribe un nombre"
           />
-          <button class="button-add" onclick="agregarAmigo()">Añadir</button>
+          <button class="button-add" onclick="addFriend()">Añadir</button>
         </div>
 
         <ul
@@ -41,12 +41,12 @@
           aria-labelledby="listaAmigos"
           role="list"
         ></ul>
-        <ul id="resultado" class="result-list" aria-live="polite"></ul>
+        <output id="resultado" class="result-list" aria-live="polite"></output>
 
         <div class="button-container">
           <button
             class="button-draw"
-            onclick="sortearAmigo()"
+            onclick="raffleFriend()"
             aria-label="Sortear amigo secreto"
           >
             <img
@@ -54,6 +54,18 @@
               alt="Ícono para sortear"
             />
             Sortear amigo
+          </button>
+
+          <button
+            class="button-draw"
+            onclick="restartGame()"
+            aria-label="Reiniciar juego"
+          >
+            <img
+              src="assets/play_circle_outline.png"
+              alt="Ícono para reiniciar"
+            />
+            Reiniciar Juego
           </button>
         </div>
       </section>
