@@ -7,10 +7,9 @@ function assignClassText(clase, text) {
 }
 
 function initialConditions() {
-  assignClassText(".name-list", "Lista de amigos");
+  assignClassText(".name-list", "Lista de amigos...");
   assignClassText(".result-list", "El amigo secreto es ...");
 }
-initialConditions();
 
 function updateList() {
   let nameListCollection = document.getElementsByClassName("name-list");
@@ -58,11 +57,21 @@ function sortFriend() {
   let resultListCollection = document.getElementsByClassName("result-list");
   let chosenFriend = resultListCollection[0];
   if (friendsList.length === 0) {
-    chosenFriend.innerHTML = "Ingresar amigos";
+    chosenFriend.innerHTML = "🚨 Ingresar Nombres de Amigos 🚨 ";
     return;
   }
 
   let sortRandom = Math.floor(Math.random() * friendsList.length);
   let sort = friendsList[sortRandom];
   chosenFriend.innerHTML = "El amigo secreto es " + sort;
+  document.getElementById("button-restar").removeAttribute("disabled");
 }
+
+function restartGame() {
+  cleanBox();
+  friendsList = [];
+  updateList();
+  initialConditions();
+  document.getElementById("button-restar").setAttribute("disabled", true);
+}
+initialConditions();

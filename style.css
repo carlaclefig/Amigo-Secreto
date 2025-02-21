@@ -143,7 +143,7 @@ ul {
 }
 
 /* Botón de sortear título */
-.button-sort {
+.buttons {
   display: flex;
   align-items: center;
   width: 100%;
@@ -154,10 +154,14 @@ ul {
   font-size: 16px;
 }
 
-.button-sort img {
+.buttons img {
   margin-right: 40px;
 }
 
-.button-sort:hover {
+.buttons:hover {
   background-color: var(--color-button-hover);
+}
+
+.buttons:disabled {
+  background: #898989;
 }
