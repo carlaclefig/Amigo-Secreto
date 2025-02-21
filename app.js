@@ -13,8 +13,8 @@ function initialConditions() {
 initialConditions();
 
 function updateList() {
-  let listCollection = document.getElementsByClassName("name-list");
-  let list = listCollection[0];
+  let nameListCollection = document.getElementsByClassName("name-list");
+  let list = nameListCollection[0];
   list.innerHTML = "";
 
   friendsList.forEach((friendName) => {
@@ -52,4 +52,17 @@ function addFriend() {
   }
 
   console.log(friendsList);
+}
+
+function sortFriend() {
+  let resultListCollection = document.getElementsByClassName("result-list");
+  let chosenFriend = resultListCollection[0];
+  if (friendsList.length === 0) {
+    chosenFriend.innerHTML = "Ingresar amigos";
+    return;
+  }
+
+  let sortRandom = Math.floor(Math.random() * friendsList.length);
+  let sort = friendsList[sortRandom];
+  chosenFriend.innerHTML = "El amigo secreto es " + sort;
 }

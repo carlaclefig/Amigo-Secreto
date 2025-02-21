@@ -143,20 +143,21 @@ ul {
 }
 
 /* Botón de sortear título */
-.button-draw {
+.button-sort {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 10px 40px;
+  margin: 15px 0px;
   color: var(--color-white);
   background-color: var(--color-button);
   font-size: 16px;
 }
 
-.button-draw img {
+.button-sort img {
   margin-right: 40px;
 }
 
-.button-draw:hover {
+.button-sort:hover {
   background-color: var(--color-button-hover);
 }
